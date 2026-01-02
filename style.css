@@ -1,0 +1,121 @@
+/* ================================
+   GLOBAL
+================================ */
+* {
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #f5f7fa;
+  color: #333;
+}
+
+/* ================================
+   HEADER
+================================ */
+header {
+  background: #4a6cf7;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+/* ================================
+   NAVBAR
+================================ */
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  background: #fff;
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+nav button {
+  padding: 10px 20px;
+  border: none;
+  background: #4a6cf7;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+nav button:hover {
+  background: #354bdc;
+}
+
+/* ================================
+   MAIN CONTENT
+================================ */
+main {
+  padding: 20px;
+}
+
+section {
+  margin-bottom: 30px;
+}
+
+.hero {
+  text-align: center;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  margin-top: 15px;
+}
+
+/* ================================
+   BUTTON
+================================ */
+button {
+  cursor: pointer;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+/* ================================
+   FOOTER
+================================ */
+footer {
+  text-align: center;
+  padding: 15px;
+  background: #eee;
+  font-size: 0.9em;
+}
+
+/* ================================
+   RESPONSIVE (MOBILE)
+================================ */
+@media (max-width: 768px) {
+
+  nav {
+    flex-direction: column;
+  }
+
+  nav button {
+    width: 100%;
+    font-size: 1em;
+    padding: 14px;
+  }
+
+  main {
+    padding: 15px;
+  }
+
+  .card {
+    padding: 15px;
+  }
+
+  button {
+    width: 100%;
+    margin-top: 10px;
+  }
+}

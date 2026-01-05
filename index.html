@@ -5,26 +5,29 @@
 
   <title>SpeakUp! | Stop Bullying</title>
 
-  <!-- Wajib agar responsif di mobile -->
+  <!-- Responsif Mobile -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Deskripsi singkat -->
-  <meta name="description" content="SpeakUp! adalah website edukasi dan refleksi untuk mencegah bullying dan menciptakan lingkungan yang aman.">
+  <!-- SEO Description -->
+  <meta 
+    name="description" 
+    content="SpeakUp! adalah website edukasi dan refleksi untuk mencegah bullying dan menciptakan lingkungan yang aman."
+  >
 
-  <!-- CSS -->
+  <!-- CSS Utama -->
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <!-- HEADER -->
-  <header class="site-header">
+  <!-- ================= HEADER ================= -->
+  <header class="site-header" role="banner">
     <h1>SpeakUp!</h1>
-    <p>Stop Bullying • Edukasi • Refleksi</p>
+    <p class="tagline">Stop Bullying • Edukasi • Refleksi</p>
   </header>
 
-  <!-- NAVIGASI -->
-  <nav class="navigation">
+  <!-- ================= NAVIGASI ================= -->
+  <nav class="navigation" aria-label="Navigasi Utama">
     <button type="button" onclick="loadPage('home')">
       Beranda
     </button>
@@ -38,18 +41,45 @@
     </button>
   </nav>
 
-  <!-- KONTEN DINAMIS (DIISI OLEH JAVASCRIPT) -->
-  <main id="app" class="content">
-    <!-- Halaman akan dimuat oleh script.js -->
-  </main>
+  <!-- ================= WRAPPER UTAMA ================= -->
+  <!-- Wrapper ini TIDAK mengganggu JS -->
+  <div class="app-wrapper">
 
-  <!-- FOOTER -->
-  <footer class="site-footer">
-    <p>© 2025 SpeakUp! | Anti Bullying Education</p>
+    <!-- ================= KONTEN DINAMIS ================= -->
+    <main 
+      id="app" 
+      class="content" 
+      role="main"
+      aria-live="polite"
+    >
+      <!-- 
+        Konten halaman (home, edukasi, refleksi)
+        dimuat sepenuhnya oleh script.js
+      -->
+    </main>
+
+  </div>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="site-footer" role="contentinfo">
+    <p>
+      © 2025 <strong>SpeakUp!</strong> | Anti Bullying Education
+    </p>
   </footer>
 
-  <!-- JAVASCRIPT -->
+  <!-- ================= JAVASCRIPT ================= -->
+  <!-- defer memastikan DOM siap sebelum JS dijalankan -->
   <script src="script.js" defer></script>
+
+  <!-- === SHORTCUT KHUSUS PEMBUAT === -->
+<script>
+document.addEventListener("keydown", function (e) {
+    if (e.ctrlKey && e.altKey && e.key === "p") {
+        window.location.href = "/pembuat.html?key=AKSES_PEMBUAT_RAHASIA";
+    }
+});
+</script>
+
 
 </body>
 </html>

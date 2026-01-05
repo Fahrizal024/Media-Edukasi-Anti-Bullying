@@ -1,121 +1,188 @@
-/* ================================
-   GLOBAL
-================================ */
+/* ==================================================
+   GLOBAL RESET & BASE
+================================================== */
 * {
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  font-family: "Arial", sans-serif;
 }
 
 body {
-  margin: 0;
   background: #f5f7fa;
   color: #333;
+  line-height: 1.6;
 }
 
-/* ================================
+/* ==================================================
    HEADER
-================================ */
-header {
-  background: #4a6cf7;
-  color: white;
+================================================== */
+.site-header {
+  background: linear-gradient(135deg, #4a6cf7, #5f7cff);
+  color: #fff;
   text-align: center;
-  padding: 20px;
+  padding: 30px 20px;
 }
 
-/* ================================
-   NAVBAR
-================================ */
-nav {
+.site-header h1 {
+  font-size: 2.2rem;
+  margin-bottom: 6px;
+}
+
+.site-header .tagline {
+  font-size: 1rem;
+  opacity: 0.95;
+}
+
+/* ==================================================
+   NAVIGATION
+================================================== */
+.navigation {
   display: flex;
   justify-content: center;
-  gap: 10px;
+  gap: 12px;
   background: #fff;
-  padding: 10px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  padding: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
 }
 
-nav button {
-  padding: 10px 20px;
+.navigation button {
+  padding: 10px 22px;
   border: none;
+  border-radius: 10px;
   background: #4a6cf7;
-  color: white;
-  border-radius: 8px;
+  color: #fff;
+  font-size: 0.95rem;
   cursor: pointer;
+  transition: background 0.25s ease, transform 0.15s ease;
 }
 
-nav button:hover {
+.navigation button:hover {
   background: #354bdc;
 }
 
-/* ================================
+.navigation button:active {
+  transform: scale(0.97);
+}
+
+/* ==================================================
    MAIN CONTENT
-================================ */
-main {
-  padding: 20px;
+================================================== */
+.content {
+  padding: 30px 20px;
+  max-width: 1000px;
+  margin: auto;
 }
 
 section {
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
 
+section h2 {
+  margin-bottom: 12px;
+  color: #2f3a8f;
+}
+
+/* ==================================================
+   HERO
+================================================== */
 .hero {
   text-align: center;
 }
 
+/* ==================================================
+   CARD
+================================================== */
 .card {
-  background: white;
-  padding: 20px;
-  border-radius: 15px;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
-  margin-top: 15px;
+  background: #ffffff;
+  padding: 24px;
+  border-radius: 18px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  margin-top: 18px;
 }
 
-/* ================================
-   BUTTON
-================================ */
+/* ==================================================
+   BUTTON UMUM
+================================================== */
 button {
   cursor: pointer;
+  transition: background 0.2s ease, transform 0.15s ease;
 }
 
 button:active {
   transform: scale(0.98);
 }
 
-/* ================================
-   FOOTER
-================================ */
-footer {
-  text-align: center;
-  padding: 15px;
-  background: #eee;
-  font-size: 0.9em;
+/* ==================================================
+   FORM REFLEKSI
+================================================== */
+.card label {
+  display: block;
+  margin-top: 18px;
+  margin-bottom: 6px;
+  font-weight: bold;
 }
 
-/* ================================
+.card textarea {
+  width: 100%;
+  min-height: 90px;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  resize: vertical;
+  font-size: 0.95rem;
+}
+
+.card textarea:focus {
+  outline: none;
+  border-color: #4a6cf7;
+}
+
+.card button {
+  margin-top: 15px;
+  padding: 12px;
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  background: #4a6cf7;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.card button:hover {
+  background: #354bdc;
+}
+
+/* ==================================================
+   FOOTER
+================================================== */
+.site-footer {
+  text-align: center;
+  padding: 18px;
+  background: #eee;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* ==================================================
    RESPONSIVE (MOBILE)
-================================ */
+================================================== */
 @media (max-width: 768px) {
 
-  nav {
+  .navigation {
     flex-direction: column;
   }
 
-  nav button {
+  .navigation button {
     width: 100%;
-    font-size: 1em;
-    padding: 14px;
+    font-size: 1rem;
   }
 
-  main {
-    padding: 15px;
+  .content {
+    padding: 20px 15px;
   }
 
   .card {
-    padding: 15px;
-  }
-
-  button {
-    width: 100%;
-    margin-top: 10px;
+    padding: 18px;
   }
 }

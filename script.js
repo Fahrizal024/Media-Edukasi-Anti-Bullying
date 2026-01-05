@@ -170,7 +170,7 @@ function loadPage(page) {
           <input
             type="text"
             id="namaPengguna"
-            placeholder="Contoh: Anonim"
+            placeholder=""
             style="width:100%;padding:8px;margin-bottom:15px;"
           >
 
